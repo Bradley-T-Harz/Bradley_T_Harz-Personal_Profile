@@ -11,8 +11,8 @@
       margin: 0 auto;
       padding: 24px;
       font: 16px/1.6 'Montserrat', system-ui, Segoe UI, Roboto, Arial, sans-serif;
-      background: #000;           /* soft natural off-white background */
-      color: #f5f9f6;                /* dark earthy text */
+      background: #000;              /* black background */
+      color: #f5f9f6;                /* default light text (headings, nav, etc.) */
     }
     header, nav, main, footer {
       margin-bottom: 24px;
@@ -42,12 +42,18 @@
       padding: 16px;
       border: 1px solid #8c5a2b;     /* earthy brown border */
       border-radius: 12px;
-      background: #ffffff;           /* clean white card background */
+      background: #eaf3ea;           /* soft sage background */
       margin-bottom: 20px;
       box-shadow: 0 2px 6px rgba(46, 46, 46, 0.1);
     }
+    .card h2 {
+      color: #2f2f2f;                /* dark grey headings inside cards */
+    }
+    .card p, .card li {
+      color: #2f2f2f;                /* dark grey text inside cards */
+    }
     .card a {
-      color: #2f6d3a;                /* forest green links */
+      color: #2f2f2f;                /* dark grey links inside cards */
       text-decoration: none;
       font-weight: bold;
     }
@@ -65,8 +71,6 @@
       margin-top: 2rem;
       padding: 1rem;
       border-top: 2px solid #2f6d3a; /* forest green top border */
-      font-size: 0.9rem;
-      color: #2e2e2e;
       text-align: center;
       background: #eaf3ea;           /* soft sage background */
       border-radius: 8px;
