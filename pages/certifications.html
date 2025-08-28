@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Awards & Certifications — Bradley T. Harz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0b0b;          /* deep black */
+    --panel:#111213;
+    --gold:#C58B1F;        /* copper/gold */
+    --ember:#E25822;       /* ember orange */
+    --silver:#B0B0B0;
+    --text:#f4f4f4;
+  }
+  html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;}
+  .wrap{max-width:1080px;margin:40px auto;padding:0 20px;}
+  header h1{font-family:Montserrat,Inter,sans-serif;letter-spacing:.5px;margin:0 0 6px;font-weight:700}
+  header p{margin:.25rem 0 1.25rem;color:#d7d7d7}
+  a{color:var(--gold);text-decoration:none}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+  .card{
+    position:relative;
+    border-radius:18px;
+    padding:16px 16px 14px;
+    background:
+      linear-gradient(var(--panel),var(--panel)) padding-box,
+      linear-gradient(135deg, rgba(197,139,31,.85), rgba(226,88,34,.65), rgba(176,176,176,.35)) border-box;
+    border:2px solid transparent;
+    box-shadow:
+      0 0 0 1px rgba(197,139,31,.25) inset,
+      0 12px 28px rgba(0,0,0,.65),
+      0 0 38px rgba(226,88,34,.08);
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .card:hover{ transform:translateY(-2px); box-shadow:0 16px 34px rgba(0,0,0,.7), 0 0 60px rgba(226,88,34,.12); }
+  .frame{
+    height:150px;border-radius:12px;
+    background:radial-gradient(120% 90% at 50% 10%, rgba(226,88,34,.16), transparent 55%),
+               #0d0e0f;
+    display:grid;place-items:center;
+    outline:1px solid rgba(197,139,31,.22);
+  }
+  .icon{width:60px;height:60px}
+  .title{font-weight:600;margin:12px 4px 6px}
+  .meta{color:#cfcfcf;font-size:.92rem;margin:0 4px 10px}
+  .btnbar{display:flex;gap:10px;margin:2px 4px 0}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:9px 12px;border-radius:10px;font-weight:600;font-size:.95rem;
+    border:1px solid rgba(197,139,31,.6); color:var(--text);
+    background:linear-gradient(180deg, rgba(197,139,31,.18), rgba(197,139,31,.06));
+  }
+  .btn:hover{border-color:var(--gold); box-shadow:0 0 0 2px rgba(197,139,31,.18) inset;}
+  .crumbs{margin-bottom:14px}
+  .crumbs a{opacity:.9}
+  /* tiny SVG color */
+  svg{fill:var(--gold)}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="crumbs"><a href="../index.html">← Back to Home</a></div>
+      <h1>Awards & Certifications</h1>
+      <p>Curated recognitions and certifications. Click any card to open the PDF in a new tab.</p>
+    </header>
+
+    <section class="grid">
+
+      <article class="card">
+        <a class="frame" href="../assets/certifications/2025_symposium_grand_prize_rrcc.pdf" target="_blank" rel="noopener">
+          <!-- trophy icon -->
+          <svg class="icon" viewBox="0 0 24 24"><path d="M19 3h-2V2a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v1H5a1 1 0 0 0-1 1v2a5 5 0 0 0 4 4.9V13H7a3 3 0 0 0-3 3v2h16v-2a3 3 0 0 0-3-3h-1V10.9A5 5 0 0 0 20 6V4a1 1 0 0 0-1-1Zm-1 3a3 3 0 0 1-3 3H9A3 3 0 0 1 6 6V5h12v1ZM6 18v-2a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v2H6Z"/></svg>
+        </a>
+        <div class="title">2025 Symposium — Grand Prize Paper (RRCC)</div>
+        <div class="meta">Peer-recognized paper; official PDF.</div>
+        <div class="btnbar">
+          <a class="btn" href="../assets/certifications/2025_symposium_grand_prize_rrcc.pdf" target="_blank" rel="noopener">View PDF</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="frame" href="../assets/certifications/forr_volunteer_quiz.pdf" target="_blank" rel="noopener">
+          <!-- ribbon -->
+          <svg class="icon" viewBox="0 0 24 24"><path d="M12 2a6 6 0 1 0 0 12A6 6 0 0 0 12 2Zm0 10a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm-5 8.5 3-1.2 2 2.7 2-2.7 3 1.2V15a7.98 7.98 0 0 1-10 0v5.5Z"/></svg>
+        </a>
+        <div class="title">FoRR Volunteer Quiz</div>
+        <div class="meta">Friends of the river readiness.</div>
+        <div class="btnbar">
+          <a class="btn" href="../assets/certifications/forr_volunteer_quiz.pdf" target="_blank" rel="noopener">View PDF</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="frame" href="../assets/certifications/reccs_certificate.pdf" target="_blank" rel="noopener">
+          <!-- certificate -->
+          <svg class="icon" viewBox="0 0 24 24"><path d="M4 3h16a1 1 0 0 1 1 1v16l-4-2-4 2-4-2-4 2V4a1 1 0 0 1 1-1Zm2 4h12v2H6V7Zm0 4h8v2H6v-2Z"/></svg>
+        </a>
+        <div class="title">RECCS Certificate</div>
+        <div class="meta">Research Experience for Community College Students.</div>
+        <div class="btnbar">
+          <a class="btn" href="../assets/certifications/reccs_certificate.pdf" target="_blank" rel="noopener">View PDF</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="frame" href="../assets/certifications/responsible_conduct_of_research_ugs.pdf" target="_blank" rel="noopener">
+          <!-- shield -->
+          <svg class="icon" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8.9 8 11 4.5-2.1 8-6 8-11V5l-8-3Zm0 18c-3.2-1.7-6-4.8-6-9V6.3l6-2.3 6 2.3V11c0 4.2-2.8 7.3-6 9Zm-1-5 6-6-1.4-1.4L11 12.2 8.4 9.6 7 11l4 4Z"/></svg>
+        </a>
+        <div class="title">Responsible Conduct of Research (UGS)</div>
+        <div class="meta">Ethics & compliance training.</div>
+        <div class="btnbar">
+          <a class="btn" href="../assets/certifications/responsible_conduct_of_research_ugs.pdf" target="_blank" rel="noopener">View PDF</a>
+        </div>
+      </article>
+
+    </section>
+  </div>
+</body>
+</html>
