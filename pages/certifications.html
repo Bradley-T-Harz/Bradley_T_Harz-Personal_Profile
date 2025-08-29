@@ -37,10 +37,10 @@
   }
   .card:hover{ transform:translateY(-2px); box-shadow:0 16px 34px rgba(0,0,0,.7), 0 0 60px rgba(226,88,34,.12); }
   .frame{
-    height:150px;border-radius:12px;
-    background:radial-gradient(120% 90% at 50% 10%, rgba(226,88,34,.16), transparent 55%),
-               #0d0e0f;
-    display:grid;place-items:center;
+    height:auto;               /* image decides height */
+    background:#0d0e0f;        /* fallback behind image */
+    padding:8px;
+    border-radius:12px;
     outline:1px solid rgba(197,139,31,.22);
   }
   .icon{width:60px;height:60px}
@@ -58,7 +58,18 @@
   .crumbs a{opacity:.9}
   /* tiny SVG color */
   svg{fill:var(--gold)}
-  .thumb{width:100%;height:100%;object-fit:contain;display:block;border-radius:10px}
+  .thumb{width:100%;height:auto;object-fit:contain;display:block;border-radius:10px}
+  .card .caption{
+    background:#111;
+    color:var(--gold);
+    font-weight:600;
+    text-align:center;
+    padding:6px 10px;
+    border-top:1px solid var(--gold);
+    border-radius:0 0 10px 10px;
+    margin-top:6px;
+  }
+
 </style>
 </head>
 <body>
@@ -74,11 +85,10 @@
       <article class="card">
         <a class="frame" href="../assets/certifications/2025_symposium_grand_prize_rrcc.pdf" target="_blank" rel="noopener">
           <!-- trophy icon -->
-          <img class="thumb" src="../assets/certifications/thumbs/2025_symposium_grand_prize_rrcc.jpg"
+          <img class="thumb" src="../assets/certifications/thumbs/2025_symposium_grand_prize_rrcc.jpg?v=2"
                alt="2025 Symposium — Grand Prize Paper (RRCC)" loading="lazy">
         </a>
-        <div class="title">2025 Symposium — Grand Prize Paper (RRCC)</div>
-        <div class="meta">Peer-recognized paper; official PDF.</div>
+        <div class="caption">2025 Symposium — Grand Prize Paper (RRCC)</div>
         <div class="btnbar">
           <a class="btn" href="../assets/certifications/2025_symposium_grand_prize_rrcc.pdf" target="_blank" rel="noopener">View PDF</a>
         </div>
@@ -90,8 +100,7 @@
           <img class="thumb" src="../assets/certifications/thumbs/forr_volunteer_quiz.jpg"
                alt="FoRR Volunteer Quiz" loading="lazy">
         </a>
-        <div class="title">FoRR Volunteer Quiz</div>
-        <div class="meta">Friends of the river readiness.</div>
+        <div class="caption">FoRR Volunteer Quiz</div>
         <div class="btnbar">
           <a class="btn" href="../assets/certifications/forr_volunteer_quiz.pdf" target="_blank" rel="noopener">View PDF</a>
         </div>
@@ -103,8 +112,7 @@
           <img class="thumb" src="../assets/certifications/thumbs/reccs_certificate.jpg"
                alt="RECCS Certificate" loading="lazy">
         </a>
-        <div class="title">RECCS Certificate</div>
-        <div class="meta">Research Experience for Community College Students.</div>
+        <div class="caption">RECCS Certificate</div>
         <div class="btnbar">
           <a class="btn" href="../assets/certifications/reccs_certificate.pdf" target="_blank" rel="noopener">View PDF</a>
         </div>
@@ -116,8 +124,7 @@
           <img class="thumb" src="../assets/certifications/thumbs/responsible_conduct_of_research_ugs.jpg"
                alt="Responsible Conduct of Research (UGS)" loading="lazy">
         </a>
-        <div class="title">Responsible Conduct of Research (UGS)</div>
-        <div class="meta">Ethics & compliance training.</div>
+        <div class="caption">Responsible Conduct of Research (UGS)</div>
         <div class="btnbar">
           <a class="btn" href="../assets/certifications/responsible_conduct_of_research_ugs.pdf" target="_blank" rel="noopener">View PDF</a>
         </div>
