@@ -1,0 +1,89 @@
+/* === Natural theme overrides (earth/forest metals) === */
+:root{
+  /* Core */
+  --bg:#0b100c;          /* deep forest */
+  --panel:#121713;       /* charcoal green */
+  --text:#f3f6f1;        /* off-white/lichen */
+  --muted:#d7ded4;       /* desaturated light text */
+
+  /* Earth tones */
+  --leaf:#3c7a4a;        /* leaf green */
+  --pine:#1f3d2b;        /* dark pine */
+  --earth:#6b4e3d;       /* soil brown */
+  --clay:#c26e3a;        /* rust/clay */
+  --sand:#d7c7a7;        /* sandstone */
+
+  /* Metallic accents */
+  --gold:#c9a34e;        /* warm gold */
+  --bronze:#8c6239;      /* bronze */
+  --brass:#bfa35b;       /* brass */
+  --ruby:#b23a48;        /* ruby highlight */
+
+  /* RGB tuples (for translucent grads) */
+  --brass-rgb:191,163,91;
+  --clay-rgb:194,110,58;
+  --sand-rgb:215,199,167;
+}
+
+/* Global */
+html, body { background: var(--bg); color: var(--text); }
+a { color: var(--gold); text-decoration: none; }
+a:hover { color:#f2d07a; }
+
+/* Cards */
+.card{
+  background:
+    linear-gradient(var(--panel),var(--panel)) padding-box,
+    linear-gradient(135deg,
+      rgba(var(--brass-rgb),.85),
+      rgba(var(--clay-rgb),.65),
+      rgba(var(--sand-rgb),.35)
+    ) border-box;
+  border:2px solid transparent;
+  box-shadow:
+    0 0 0 1px rgba(191,163,91,.20) inset,
+    0 12px 28px rgba(0,0,0,.55),
+    0 0 42px rgba(194,110,58,.08);
+}
+.card:hover{
+  transform: translateY(-2px);
+  box-shadow:
+    0 16px 34px rgba(0,0,0,.65),
+    0 0 60px rgba(194,110,58,.12);
+}
+
+/* Headings/meta */
+header h1{ color: #f1f2ea; }
+header p.meta, .meta{ color: var(--muted); }
+
+/* Buttons */
+.btn{
+  border:1px solid rgba(191,163,91,.65);
+  color:var(--text);
+  background:linear-gradient(180deg, rgba(191,163,91,.18), rgba(191,163,91,.07));
+}
+.btn:hover{
+  border-color: var(--gold);
+  box-shadow:0 0 0 2px rgba(191,163,91,.18) inset, 0 0 24px rgba(191,163,91,.10);
+}
+
+/* Thumbnail frame (keeps your image-first layout) */
+.frame{
+  height:auto;
+  border-radius:12px;
+  background:
+    radial-gradient(120% 90% at 50% 10%, rgba(var(--clay-rgb),.16), transparent 55%),
+    #0e120f;
+  padding:8px;
+  outline:1px solid rgba(191,163,91,.22);
+}
+
+/* Tiny svg accents inherit metallic tone */
+svg{ fill: var(--gold); }
+
+/* Titles for card items */
+.title{ color:#f4f6f1; }
+
+/* Breadcrumbs */
+.crumbs a{ color:#d2c39c; opacity:.95; }
+.crumbs a:hover{ color:#f2d07a; }
