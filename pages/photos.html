@@ -1,5 +1,9 @@
-<!doctype html><meta charset="utf-8"><title>Picture Blog</title>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><title>Picture Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../assets/css/style.css" rel="stylesheet">
 <style>
   body{max-width:980px;margin:0 auto;padding:24px;font:16px/1.6 system-ui,Segoe UI,Roboto,Arial}
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
@@ -7,17 +11,40 @@
   img{width:100%;height:220px;object-fit:cover;display:block}
   figcaption{padding:8px 10px}
 </style>
+<link rel="icon" href="data:,">
+</head>
+<body class="photo-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="projects.html">Projects & Research</a>
+      <a href="certifications.html">Awards & Certifications</a>
+      <a href="photos.html" aria-current="page">Picture Blog</a>
+    </nav>
+<main id="main-content" tabindex="-1">
+<header>
 <h1>Picture Blog</h1>
 <p>Fieldwork, wildfire research, bioremediation, and more.</p>
+</header>
+<p><a class="btn" href="https://photos.app.goo.gl/nvvBbJAZoNrmQvwn6" target="_blank" rel="noopener">Picture Blog (Google Photos)</a></p>
 
 <div class="grid">
   <!-- Replace with your images & captions -->
   <figure>
+    <!-- Preserve the original photo reference until its source file is supplied. -->
+    <template id="missing-riparian-photo">
     <a href="../assets/photos/2025-08-01-riparian.jpg" target="_blank" rel="noopener">
       <img src="../assets/photos/2025-08-01-riparian.jpg" alt="Riparian transect in morning light" loading="lazy">
     </a>
-    <figcaption><strong>Riparian transect</strong><br><small>Aug 1, 2025 — Morning survey.</small></figcaption>
+    </template>
+    <div class="photo-unavailable" role="img" aria-label="Riparian transect in morning light — photo unavailable">Photo unavailable</div>
+    <figcaption><strong>Riparian transect</strong><br><small>Aug 1, 2025 — Morning survey.</small><span class="availability-note">The original photo is not included in this site. Browse the Picture Blog above for the available album.</span></figcaption>
   </figure>
 </div>
 
 <p><a href="../">← Back to Home</a></p>
+
+</main>
+<footer class="site-footer"><a href="../index.html#contact">Contact Bradley T. Harz</a></footer>
+</body>
+</html>

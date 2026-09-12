@@ -11,7 +11,7 @@
   <!-- Fonts: Montserrat (UI) + Merriweather 900 (H1 only) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Merriweather:wght@900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Merriweather:wght@900&amp;display=swap" rel="stylesheet">
 
   <style>
     body {
@@ -89,23 +89,26 @@
       border-radius: 8px;
     }
   </style>
+<link rel="icon" href="data:,">
 </head>
-<body>
+<body class="home-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header>
   <h1>Bradley T. Harz</h1>
   <p>Ecologist • Environmental Data Science • Natural Disaster Relief & Resilience • Bioremediation • Wilderness First Responder</p>
 </header>
 
-<nav>
-  <a href="./">Home</a>
+<nav class="site-nav" aria-label="Main navigation">
+  <a href="./" aria-current="page">Home</a>
   <a href="pages/projects.html">Projects & Research</a>
   <a href="pages/certifications.html">Awards & Certifications</a>
+  <a href="pages/photos.html">Picture Blog</a>
   <a href="https://photos.app.goo.gl/nvvBbJAZoNrmQvwn6" target="_blank" rel="noopener">Picture Blog (Google Photos)</a>
   <a href="https://github.com/Bradley-T-Harz" target="_blank" rel="noopener">GitHub</a>
   <a href="mailto:BradleyTHarz3407@proton.me">Contact</a>
 </nav>
 
-<main>
+<main id="main-content" tabindex="-1">
   <section class="card">
     <h2>About</h2>
     <p>I am an ecologist and interdisciplinary researcher focused on environmental data science, wildfire dynamics, and bioremediation. My work integrates remote sensing, informatics, and field ecology to understand ecosystem resilience and develop strategies for natural disaster relief and long-term restoration.</p>
@@ -114,16 +117,16 @@
   <section class="card">
     <h2>Quick Links</h2>
     <ul>
-      <li><a href="https://bradley-t-harz.github.io/FRE_vs_dNBR/assets/posters/burn-bright-scar-deep.pdf?v=2" target="_blank" rel="noopener">Latest poster (PDF)</a></li>
+      <li><a href="https://bradley-t-harz.github.io/FRE_vs_dNBR/assets/posters/burn-bright-scar-deep.pdf?v=2" target="_blank" rel="noopener" aria-describedby="poster-availability">Latest poster (PDF)</a><span class="availability-note" id="poster-availability">This poster is currently unavailable.</span></li>
       <li><a href="https://photos.app.goo.gl/nvvBbJAZoNrmQvwn6">Picture Blog (Google Photos)</a></li>
       <li><a href="https://github.com/RRCC-Robotics-Programming-Sub-Team" target="_blank" rel="noopener">RRCC Robotics Programming Repository</a></li>
-      <li><a href="https://bradley-t-harz.github.io/FRE_vs_dNBR/" target="_blank" rel="noopener">Fire project: FRE vs dNBR</a></li>
+      <li><a href="https://bradley-t-harz.github.io/FRE_vs_dNBR/" target="_blank" rel="noopener" aria-describedby="fire-availability">Fire project: FRE vs dNBR</a><span class="availability-note" id="fire-availability">This project site is currently unavailable.</span></li>
     </ul>
   </section>
 </main>
 
 <footer>
-</ul>
+<!-- Original unmatched </ul> retained as a comment; no list is open here. -->
 
 <!-- ───────────────────────────────────────── Contact Info ───────────────────────────────────────── -->
 <div id="contact" style="
@@ -140,15 +143,17 @@
 
   <p style="margin:0;">
     <strong style="color:#FFD700;">Bradley T. Harz</strong><br>
-    LinkedIn: <a href="https://www.linkedin.com/in/bradley-thaddeus-harz/" target="_blank" style="color:#FFD700;">bradley-thaddeus-harz</a><br>
+    LinkedIn: <a href="https://www.linkedin.com/in/bradley-thaddeus-harz/" target="_blank" style="color:#FFD700;" rel="noopener">bradley-thaddeus-harz</a><br>
     Email: <a href="mailto:BradleyTHarz3407@proton.me" style="color:#FFD700;">BradleyTHarz3407@proton.me</a><br>
-    Business Number: <a href="+1 (720) 772-1116‬" target="_blank" style="color:#FFD700;">+1 (720) 772-1116‬</a><br>
-    GitHub: <a href="https://github.com/Bradley-T-Harz" target="_blank" style="color:#FFD700;">Bradley-T-Harz</a><br>
+    Business Number: <a href="tel:+17207721116" style="color:#FFD700;">+1 (720) 772-1116</a><br>
+    GitHub: <a href="https://github.com/Bradley-T-Harz" target="_blank" style="color:#FFD700;" rel="noopener">Bradley-T-Harz</a><br>
     Affiliation: Red Rocks Community College<br>
-    ORCID: <a href="https://orcid.org/0009-0005-7217-352X" target="_blank" style="color:#FFD700;">0009-0005-7217-352X</a><br>
+    ORCID: <a href="https://orcid.org/0009-0005-7217-352X" target="_blank" style="color:#FFD700;" rel="noopener">0009-0005-7217-352X</a><br>
     <span style="color:#888;">© <span id="y"></span> Bradley T. Harz</span>
   </p>
 </div>
+
+</footer>
 
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
