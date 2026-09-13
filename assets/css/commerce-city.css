@@ -12,3 +12,7 @@
 .commerce-slideshow:focus-visible,
 .commerce-slide-controls button:focus-visible { outline: 3px solid #f2d07a; outline-offset: 4px; }
 .commerce-slideshow:hover { transform: none; }
+
+/* Detailed posters share full-width cards and the existing media framing. */
+.commerce-research-outputs { grid-template-columns: minmax(0, 1fr); }
+.commerce-research-outputs .frame:hover { outline-color: var(--gold); }
