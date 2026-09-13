@@ -1,0 +1,14 @@
+/* Commerce City presentation only; shared site styling remains unchanged. */
+.commerce-slideshow .commerce-slide { margin: 0 0 24px; }
+.commerce-slideshow .commerce-slide[hidden],
+.commerce-slideshow [hidden] { display: none; }
+.commerce-slideshow .frame { aspect-ratio: 3 / 2; }
+.commerce-slideshow .frame img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.commerce-slideshow.is-interactive .commerce-slide { margin-bottom: 0; }
+.commerce-slide-controls { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; margin-top: 16px; }
+.commerce-slide-controls button { font: inherit; font-weight: 600; cursor: pointer; }
+.commerce-slide-controls button[aria-disabled="true"] { opacity: .55; cursor: default; }
+.commerce-slide-counter { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.commerce-slideshow:focus-visible,
+.commerce-slide-controls button:focus-visible { outline: 3px solid #f2d07a; outline-offset: 4px; }
+.commerce-slideshow:hover { transform: none; }
