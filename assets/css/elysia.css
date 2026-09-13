@@ -1,0 +1,46 @@
+/* Case-study structure, using the site's shared colors, cards and controls. */
+.elysia-case-study .elysia-hero { padding: 12px 0 20px; }
+.elysia-kicker { color: var(--gold); font-size: .85rem; font-weight: 700; letter-spacing: .04em; margin: 0 0 10px; }
+.elysia-lead { font-size: clamp(1.15rem, 2.5vw, 1.45rem); line-height: 1.45; max-width: 46ch; }
+.elysia-prose { max-width: 78ch; }
+.elysia-chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 22px 0; list-style: none; }
+.elysia-chips li { padding: 6px 12px; border: 1px solid var(--brass); border-radius: 999px; font-size: .875rem; background: var(--panel); }
+.elysia-section-nav { display: flex; flex-wrap: wrap; gap: 4px 12px; padding: 12px 0; border-top: 1px solid var(--earth); border-bottom: 1px solid var(--earth); }
+.elysia-section-nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 6px 4px; }
+.elysia-section { margin-top: 44px; }
+.elysia-section > h2 { margin: 0 0 18px; font-size: clamp(1.45rem, 3vw, 1.85rem); }
+.elysia-case-study [id] { scroll-margin-top: 20px; }
+.elysia-two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.elysia-three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.elysia-architecture-root { margin: 0; padding: 14px; text-align: center; font-weight: 700; background: var(--pine); border: 1px solid var(--brass); border-radius: 12px; }
+.elysia-architecture > .grid { position: relative; padding-top: 24px; }
+.elysia-architecture > .grid::before { content: ''; position: absolute; top: 0; height: 24px; left: 50%; border-left: 1px solid var(--brass); }
+.elysia-boundary { margin-top: 22px; padding: 20px; border-left: 4px solid var(--gold); border-radius: 0 12px 12px 0; background: var(--panel); }
+.elysia-boundary strong { display: block; font-size: 1.15rem; margin-bottom: 8px; }
+.elysia-boundary p { margin: 0; max-width: 80ch; }
+.elysia-note { margin: 22px 0 0; padding: 16px 20px; border: 1px solid var(--earth); border-radius: 12px; color: var(--muted); }
+.elysia-workflow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin: 24px 0; padding-left: 26px; }
+.elysia-workflow li { padding: 0 12px 0 4px; }
+.elysia-workflow li::marker { color: var(--gold); font-weight: 700; }
+.elysia-workflow strong, .elysia-workflow span { display: block; }
+.elysia-workflow strong { margin-bottom: 6px; }
+.elysia-skill-grid { margin: 0; }
+.elysia-skill-grid dt { font-weight: 700; line-height: 1.4; margin-bottom: 10px; }
+.elysia-skill-grid dd { margin: 0; color: var(--muted); }
+.elysia-media figure { margin: 0; }
+.elysia-media figcaption { margin-top: 18px; }
+.elysia-media figcaption p { margin-bottom: 0; }
+.elysia-media .frame:hover { outline-color: var(--gold); }
+.elysia-stack { margin: 0; border-top: 1px solid var(--earth); }
+.elysia-stack > div { display: grid; grid-template-columns: minmax(150px, 1fr) minmax(0, 3fr); gap: 18px; padding: 16px 0; border-bottom: 1px solid var(--earth); }
+.elysia-stack dt { font-weight: 700; }
+.elysia-stack dd { margin: 0; color: var(--muted); }
+@media (max-width: 900px) {
+  .elysia-three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .elysia-architecture .elysia-three { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 600px) {
+  .elysia-two, .elysia-three, .elysia-workflow { grid-template-columns: minmax(0, 1fr); }
+  .elysia-section { margin-top: 34px; }
+  .elysia-stack > div { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+}

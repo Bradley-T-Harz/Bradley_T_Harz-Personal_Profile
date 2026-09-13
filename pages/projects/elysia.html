@@ -1,40 +1,233 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Elysia Ecobotics Commons</title>
-<link href="../../assets/css/style.css" rel="stylesheet">
-
-<link rel="icon" href="data:,">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elysia Ecobotics — Bradley T. Harz</title>
+  <meta name="description" content="Bradley T. Harz’s engineering case study: local-first AI, governed developer tooling, a public research platform, and ecological computing R&amp;D.">
+  <link href="../../assets/css/style.css" rel="stylesheet">
+  <link href="../../assets/css/elysia.css" rel="stylesheet">
+  <link rel="icon" href="data:,">
 </head>
-<body>
-<a class="skip-link" href="#main-content">Skip to content</a>
-<div class="wrap">
+<body class="elysia-case-study">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="wrap">
     <nav class="site-nav" aria-label="Main navigation">
       <a href="../../index.html">Home</a>
-      <a href="../projects.html">Projects & Research</a>
-      <a href="../certifications.html">Awards & Certifications</a>
+      <a href="../projects.html">Projects &amp; Research</a>
+      <a href="../certifications.html">Awards &amp; Certifications</a>
       <a href="../photos.html">Picture Blog</a>
     </nav>
     <main id="main-content" tabindex="-1">
-  <div class="crumbs"><a href="../projects.html">← Projects & Research</a></div>
-  <header>
-    <h1>The Elysia Ecobotics Commons</h1>
-    <p class="meta">Coming soon.</p>
-  </header>
+      <div class="crumbs"><a href="../projects.html">← Projects &amp; Research</a></div>
+      <header class="elysia-hero">
+        <p class="elysia-kicker">Engineering case study · EcoSyneva Commons LLC</p>
+        <h1>Elysia Ecobotics</h1>
+        <p class="elysia-lead">Local intelligence, governed development, and ecological computing.</p>
+        <p class="elysia-prose">I am developing Elysia Ecobotics as an ecosystem that combines a local AI application, developer tools with explicit permissions, and a public platform for research and collaboration. Its environmental purpose connects this software foundation to ongoing work in sensing and embodied systems.</p>
+        <ul class="elysia-chips" aria-label="Project overview">
+          <li>Local AI · v1.0 released</li>
+          <li>Codev · VS Code extension</li>
+          <li>Online · live platform</li>
+          <li>Embodied systems · R&amp;D</li>
+        </ul>
+        <div class="btnbar">
+          <a class="btn" href="https://elysiaecobotics.com/" target="_blank" rel="noopener noreferrer">Visit Elysia Ecobotics Online</a>
+          <a class="btn" href="#architecture">Explore the architecture</a>
+        </div>
+      </header>
 
-  <article class="card">
-    <h2 class="title">What is it?</h2>
-    <p class="meta">
-      A modular nexus where field ecology meets autonomous systems—shared datasets,
-      reproducible workflows, and robotics that can carry the lab into the wild.
-      Watch this space.
-    </p>
-  </article>
+      <nav class="elysia-section-nav" aria-label="Case study sections">
+        <a href="#architecture">Architecture</a><a href="#local-ai">Local AI</a><a href="#codev">Codev</a><a href="#online">Online</a><a href="#privacy">Privacy</a><a href="#ecology">Ecological R&amp;D</a><a href="#my-role">My role</a><a href="#project-media">Media</a><a href="#technical-stack">Stack</a><a href="#development-status">Status</a>
+      </nav>
+
+      <section class="elysia-section" aria-labelledby="overview-title">
+        <h2 id="overview-title">What is Elysia Ecobotics?</h2>
+        <p class="elysia-prose">The central engineering problem is how to make AI useful across research, coding, and everyday work while keeping personal context and machine authority under the user’s control. I separate local computation, approved development work, and public participation into systems with distinct responsibilities.</p>
+        <p class="elysia-prose">The result spans desktop and API development, model integration, structured memory, permissions, release integrity, and web platform engineering. Ecological research provides a practical direction for these tools: inspectable analysis, reproducible workflows, and eventually field observation.</p>
+      </section>
+
+      <section class="elysia-section" aria-labelledby="architecture">
+        <h2 id="architecture">Three systems, explicit boundaries</h2>
+        <div class="elysia-architecture" aria-label="Elysia Ecobotics architecture">
+          <p class="elysia-architecture-root">Elysia Ecobotics</p>
+          <div class="grid elysia-three">
+            <article class="card">
+              <p class="elysia-kicker">01 · Local application</p>
+              <h3 class="title"><a href="#local-ai">Elysia</a></h3>
+              <p>Local models, private memory, and user-controlled hardware.</p>
+              <p class="meta">Owns local inference, memory access, and governed tools.</p>
+            </article>
+            <article class="card">
+              <p class="elysia-kicker">02 · Developer environment</p>
+              <h3 class="title"><a href="#codev">Codev</a></h3>
+              <p>Repository inspection, proposals, and reviewed changes in VS Code.</p>
+              <p class="meta">Requests bounded actions through the local Elysia API.</p>
+            </article>
+            <article class="card">
+              <p class="elysia-kicker">03 · Public platform</p>
+              <h3 class="title"><a href="#online">Elysia Ecobotics Online</a></h3>
+              <p>Research resources, add-on discovery, and community participation.</p>
+              <p class="meta">Owns online accounts and review workflows, with separate local authority.</p>
+            </article>
+          </div>
+          <div class="elysia-boundary">
+            <strong>Private local state ≠ public online account</strong>
+            <p>An online sign-in does not grant access to local memories, files, credentials, logs, or machine state. A selected export or connection is a separate, explicit action.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="elysia-section" aria-labelledby="local-ai">
+        <h2 id="local-ai">Elysia — Local-First AI</h2>
+        <p class="elysia-prose">Elysia runs through a Python runtime and local FastAPI bridge, with a React and TypeScript interface inside a Tauri desktop shell. Ollama supplies local model execution. Role-based routing supports multiple installed models and configured local alternatives; it does not silently fall back to a cloud model.</p>
+        <div class="grid elysia-two">
+          <article class="card">
+            <h3 class="title">Structured memory and continuity</h3>
+            <p>The Memory Fabric organizes local records with ownership, revisions, provenance, and explicit sharing rules. Identity, authentication sessions, profile context, and ordinary memory have separate responsibilities.</p>
+            <p>Memory changes and sharing have visible consequences. Attached files and generated artifacts are not automatically promoted into persistent memory.</p>
+          </article>
+          <article class="card">
+            <h3 class="title">Useful tools with bounded access</h3>
+            <p>Current development supports approved file inspection, bounded calculations, data summaries, and local artifacts. Model requests, tools, and higher-risk operations pass through policy and approval services.</p>
+            <p>Local operation is the default. Optional downloads and outward research require their own configuration and permission boundaries.</p>
+          </article>
+        </div>
+        <p class="elysia-note">Engineering evidence: automated account and memory tests exercise clean initialization, session revocation, account separation, deliberate sharing, and refusal of stale approvals. These checks target state transitions and access boundaries, rather than relying only on interface labels.</p>
+      </section>
+
+      <section class="elysia-section" aria-labelledby="codev">
+        <h2 id="codev">Codev — Governed Developer Environment</h2>
+        <p class="elysia-prose">Codev is the first-party VS Code extension connected to local Elysia. Workspace trust and explicit repository approval are separate requirements. Inspection starts with bounded metadata; reading selected files and applying changes require the appropriate local authority.</p>
+        <ol class="elysia-workflow">
+          <li><strong>Inspect</strong><span>Select and approve a repository, then inspect permitted context and file information.</span></li>
+          <li><strong>Propose and review</strong><span>Prepare a change plan and inspect the proposed patch in VS Code’s native diff view.</span></li>
+          <li><strong>Approve and apply</strong><span>Authorize the specific change. Source and plan checks bind execution to the reviewed state, with receipts and recovery information.</span></li>
+        </ol>
+        <div class="grid elysia-two">
+          <article class="card">
+            <h3 class="title">Bounded developer authority</h3>
+            <p>The extension delegates actions to the local API instead of treating a chat request as unrestricted machine permission. A bounded command catalog and explicit approval control supported checks.</p>
+            <p>Current planning responses are constrained. General autonomous coding reasoning remains a development direction, not a capability claimed for the released extension.</p>
+          </article>
+          <article class="card">
+            <h3 class="title">Release and supply-chain integrity</h3>
+            <p>Codev’s VSIX packaging normalizes archive metadata for reproducible bytes and checks which files belong in a distributable package.</p>
+            <p>Across the ecosystem, the online Developer Forge adds manifest validation, declared permissions, package checksums, and review records. Package integrity, review approval, and local execution permission remain distinct decisions.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="elysia-section" aria-labelledby="online">
+        <h2 id="online">Elysia Ecobotics Online</h2>
+        <p class="elysia-prose">The public platform provides downloads, research discovery, developer resources, and account-based collaboration. It uses React, TypeScript, and Vite, with Supabase authentication and Postgres, Cloudflare Pages hosting, and Workers/R2 services for selected account and storage workflows.</p>
+        <div class="grid elysia-three">
+          <article class="card">
+            <h3 class="title">Research and collaboration</h3>
+            <p>The Living Library provides searchable scientific resources with source, access, and reuse context. Commune and Commons Circle provide community, profile, and participation workflows.</p>
+            <div class="btnbar"><a class="btn" href="https://elysiaecobotics.com/living-library" target="_blank" rel="noopener noreferrer">Explore the Living Library</a></div>
+          </article>
+          <article class="card">
+            <h3 class="title">Developer Forge and Marketplace</h3>
+            <p>The Forge supports manifest editing, permission declarations, selected-package inspection, export, and checksum verification. Submission creates a review snapshot; it does not automatically publish or install an add-on.</p>
+            <div class="btnbar"><a class="btn" href="https://elysiaecobotics.com/developer-forge" target="_blank" rel="noopener noreferrer">Explore the Developer Forge</a></div>
+          </article>
+          <article class="card">
+            <h3 class="title">Accounts, review, and trust</h3>
+            <p>Authentication, profiles, participation gates, role-based review, moderation tools, and legal resources support the platform. Public browsing and privileged actions have different access requirements.</p>
+            <div class="btnbar"><a class="btn" href="https://elysiaecobotics.com/marketplace" target="_blank" rel="noopener noreferrer">View the Marketplace</a></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="elysia-section" aria-labelledby="privacy">
+        <h2 id="privacy">Privacy, Security &amp; Governance</h2>
+        <div class="grid elysia-two">
+          <article class="card"><h3 class="title">Separate identity from model context</h3><p>Local credentials and sessions do not become ordinary memory or tool context. Online profiles are managed independently, preventing account linkage from becoming an implicit data export.</p></article>
+          <article class="card"><h3 class="title">Make permission specific</h3><p>Approval is tied to a selected resource and operation. A proposal, trusted workspace, or published add-on listing does not confer blanket authority over a computer.</p></article>
+          <article class="card"><h3 class="title">Keep changes inspectable</h3><p>Revision history, provenance, operation receipts, and controlled state transitions help explain what changed and under whose authority. Tests cover rejection paths as well as successful actions.</p></article>
+          <article class="card"><h3 class="title">Separate review from execution</h3><p>Static scans and checksums provide evidence; they are not guarantees of safety. Online review and public distribution remain separate from local validation, installation, and permission decisions.</p></article>
+        </div>
+      </section>
+
+      <section class="elysia-section" aria-labelledby="ecology">
+        <h2 id="ecology">Ecological Computing &amp; Embodied Systems</h2>
+        <p class="elysia-prose">My environmental research shapes the long-term purpose: tools for examining geospatial and remote-sensing material, following data provenance, and making ecological analysis reproducible. The software foundation can support researchers before any physical platform is ready.</p>
+        <div class="grid elysia-two">
+          <article class="card"><h3 class="title">Current work: bench-stage R&amp;D</h3><p>Hardware work includes Arduino bench-node firmware for identification, status, and heartbeat signals, alongside Raspberry Pi and microcontroller integration plans. This is early commissioning and interface work.</p></article>
+          <article class="card"><h3 class="title">Direction: field observation</h3><p>Sensor integration, edge computing, computer vision, and robotic observation are research directions. Companion and Surveyor concepts explore how local intelligence could support ecological data collection; they are not presented as flight-ready or autonomous field products.</p></article>
+        </div>
+      </section>
+
+      <section class="elysia-section" aria-labelledby="my-role">
+        <h2 id="my-role">My Role</h2>
+        <p class="elysia-prose">As founder, architect, and developer, I lead Elysia Ecobotics through EcoSyneva Commons LLC. My work connects the local application, developer extension, and online platform, with particular attention to how they exchange information and where their authority stops.</p>
+        <dl class="grid elysia-three elysia-skill-grid">
+          <div class="card"><dt>AI systems</dt><dd>Local model integration, routing, structured memory, and context boundaries.</dd></div>
+          <div class="card"><dt>Software engineering</dt><dd>Python services, desktop/API integration, React, and TypeScript interfaces.</dd></div>
+          <div class="card"><dt>Platform engineering</dt><dd>Account workflows, research resources, web routes, and deployment architecture.</dd></div>
+          <div class="card"><dt>Developer tooling</dt><dd>Repository review, governed changes, manifests, packaging, and validation.</dd></div>
+          <div class="card"><dt>Security and qualification</dt><dd>Permissions, isolation, provenance, test design, and release verification.</dd></div>
+          <div class="card"><dt>Environmental computing</dt><dd>Research workflow design and early sensing/embodied-system integration.</dd></div>
+        </dl>
+      </section>
+
+      <section class="elysia-section" aria-labelledby="project-media">
+        <h2 id="project-media">Project Media</h2>
+        <p class="elysia-prose">An empty-memory qualification view from the local application and signed-out views of the public platform. Select any image to inspect the full screenshot.</p>
+        <div class="grid elysia-two elysia-media">
+          <figure class="card">
+            <a class="frame" href="../../assets/projects/elysia/local-memory-controls.png" target="_blank" rel="noopener noreferrer"><img class="thumb" src="../../assets/projects/elysia/local-memory-controls.png" width="1440" height="900" loading="lazy" alt="Elysia desktop Memory room with zero stored items and settings for backup, retention, and memory privacy."></a>
+            <figcaption><h3 class="title">Local memory controls</h3><p>Clean qualification profile showing memory stewardship and user-controlled settings.</p></figcaption>
+          </figure>
+          <figure class="card">
+            <a class="frame" href="../../assets/projects/elysia/online-home.png" target="_blank" rel="noopener noreferrer"><img class="thumb" src="../../assets/projects/elysia/online-home.png" width="1440" height="1000" loading="lazy" alt="Signed-out Elysia Ecobotics Online homepage with downloads, research, community, and developer links."></a>
+            <figcaption><h3 class="title">Public platform</h3><p>The live entry point for releases, resources, and online participation.</p></figcaption>
+          </figure>
+          <figure class="card">
+            <a class="frame" href="../../assets/projects/elysia/developer-forge.png" target="_blank" rel="noopener noreferrer"><img class="thumb" src="../../assets/projects/elysia/developer-forge.png" width="1440" height="1000" loading="lazy" alt="Public Developer Forge with add-on preparation tools and explicit local execution and private-data boundaries."></a>
+            <figcaption><h3 class="title">Developer Forge</h3><p>Add-on preparation and review are presented separately from local installation authority.</p></figcaption>
+          </figure>
+          <figure class="card">
+            <a class="frame" href="../../assets/projects/elysia/living-library.png" target="_blank" rel="noopener noreferrer"><img class="thumb" src="../../assets/projects/elysia/living-library.png" width="1440" height="1000" loading="lazy" alt="Living Library science search interface with scientific resource categories and access-context guidance."></a>
+            <figcaption><h3 class="title">Living Library</h3><p>Research discovery organized around scientific questions and source context.</p></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="elysia-section" aria-labelledby="technical-stack">
+        <h2 id="technical-stack">Technical Stack</h2>
+        <dl class="elysia-stack">
+          <div><dt>Local application</dt><dd>Python · FastAPI · Tauri · React · TypeScript · Vite</dd></div>
+          <div><dt>AI and memory</dt><dd>Ollama · local model routing · structured local storage · provenance and access policies</dd></div>
+          <div><dt>Developer environment</dt><dd>VS Code extension API · TypeScript · Git inspection · reviewed patches · reproducible VSIX packaging</dd></div>
+          <div><dt>Online platform</dt><dd>React · TypeScript · Vite · Supabase Auth/Postgres · Cloudflare Pages, Workers, and R2</dd></div>
+          <div><dt>Embodied R&amp;D</dt><dd>Arduino bench firmware · Raspberry Pi integration planning · sensor and edge-system interfaces</dd></div>
+        </dl>
+      </section>
+
+      <section class="elysia-section" aria-labelledby="development-status">
+        <h2 id="development-status">Development Status</h2>
+        <p class="elysia-prose">Public releases and current development are distinct. Elysia and Codev have published v1.0 releases; the capabilities discussed here also reflect ongoing work in their current development codebases.</p>
+        <dl class="grid elysia-two elysia-skill-grid">
+          <div class="card"><dt>Elysia · released, actively developed</dt><dd>Public Linux v1.0 release available. Memory, governed tools, and local workflows continue to evolve.</dd></div>
+          <div class="card"><dt>Codev · released, bounded scope</dt><dd>Public v1.0 extension available. Approved repository work is functional; broader coding intelligence remains in development.</dd></div>
+          <div class="card"><dt>Online · live, actively developed</dt><dd>Public resources, accounts, Forge, and Marketplace review surfaces are available. Feature availability and access remain specific to each surface.</dd></div>
+          <div class="card"><dt>Embodied systems · active R&amp;D</dt><dd>Bench firmware and hardware integration plans; field autonomy remains a future research objective.</dd></div>
+        </dl>
+      </section>
+
+      <section class="elysia-section" aria-labelledby="project-links">
+        <h2 id="project-links">Explore the Project</h2>
+        <div class="btnbar">
+          <a class="btn" href="https://elysiaecobotics.com/" target="_blank" rel="noopener noreferrer">Elysia Ecobotics Online</a>
+          <a class="btn" href="https://elysiaecobotics.com/archive" target="_blank" rel="noopener noreferrer">Official releases and checksums</a>
+          <a class="btn" href="https://github.com/Bradley-T-Harz/Elysia" target="_blank" rel="noopener noreferrer">Elysia public repository</a>
+          <a class="btn" href="https://github.com/Bradley-T-Harz/elysia-codev" target="_blank" rel="noopener noreferrer">Codev public repository</a>
+        </div>
+      </section>
     </main>
     <footer class="site-footer"><a href="../../index.html#contact">Contact Bradley T. Harz</a></footer>
-</div>
-
+  </div>
 </body>
 </html>
